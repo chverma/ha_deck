@@ -4,7 +4,7 @@ namespace esphome {
 namespace ha_deck {
 static const lv_font_t * font_large;
 static const lv_font_t * font_normal;
-c
+
 void HdSlider::set_text(std::string text) {
     text_ = text;
 }
