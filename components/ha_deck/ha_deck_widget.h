@@ -6,6 +6,10 @@
 #include "esphome/core/helpers.h"
 #include "esphome/core/log.h"
 #include "lvgl.h"
+#include "Font16.c"
+#include "Font32.c"
+#include "Material24.c"
+#include "Material48.c"
 
 LV_FONT_DECLARE(Font16);
 LV_FONT_DECLARE(Font24);
