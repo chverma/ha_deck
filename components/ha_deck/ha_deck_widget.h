@@ -7,7 +7,7 @@
 #include "esphome/core/log.h"
 #include "lvgl.h"
 #include "Font16.c"
-#include "Font32.c"
+#include "Font24.c"
 #include "Material24.c"
 #include "Material48.c"
 
