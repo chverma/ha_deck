@@ -6,15 +6,7 @@
 #include "esphome/core/helpers.h"
 #include "esphome/core/log.h"
 #include "lvgl.h"
-#include "Font16.c"
-#include "Font24.c"
-#include "Material24.c"
-#include "Material48.c"
 
-LV_FONT_DECLARE(Font16);
-LV_FONT_DECLARE(Font24);
-LV_FONT_DECLARE(Material24);
-LV_FONT_DECLARE(Material48);
 
 namespace esphome {
 namespace ha_deck {
