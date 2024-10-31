@@ -88,10 +88,10 @@ void HdSlider::render_() {
 
         if (text_ != "") {
             lv_label_set_text(label, text_.c_str());
-            lv_obj_set_style_text_font(label, &LV_FONT_MONTSERRAT_16, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_text_font(label, &lv_font_montserrat_16, LV_PART_MAIN | LV_STATE_DEFAULT);
         } else {
             lv_label_set_text(label, icon_.c_str());
-            lv_obj_set_style_text_font(label, &LV_FONT_MONTSERRAT_24, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_text_font(label, &lv_font_montserrat_24, LV_PART_MAIN | LV_STATE_DEFAULT);
         }
     }
 }
