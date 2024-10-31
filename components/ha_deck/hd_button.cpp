@@ -3,6 +3,9 @@
 namespace esphome {
 namespace ha_deck {
 
+static const lv_font_t * font_large;
+static const lv_font_t * font_normal;
+
 void HdButton::set_text(std::string text) {
     text_ = text;
 }
@@ -42,6 +45,19 @@ void HdButton::add_on_long_press_callback(std::function<void()> &&callback) {
 void HdButton::render_() {
     lv_obj_t *icon;
     lv_obj_t *label;
+    font_large = LV_FONT_DEFAULT;
+    font_normal = LV_FONT_DEFAULT;
+
+    #if LV_FONT_MONTSERRAT_24
+            font_large     = &lv_font_montserrat_24;
+    #else
+            LV_LOG_WARN("LV_FONT_MONTSERRAT_24 is not enabled for the widgets demo. Using LV_FONT_DEFAULT instead.");
+    #endif
+    #if LV_FONT_MONTSERRAT_16
+            font_normal    = &lv_font_montserrat_16;
+    #else
+            LV_LOG_WARN("LV_FONT_MONTSERRAT_16 is not enabled for the widgets demo. Using LV_FONT_DEFAULT instead.");
+    #endif
 
     button_ = lv_btn_create(lv_scr_act());
 
