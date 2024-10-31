@@ -34,16 +34,6 @@ void HdValueCard::render_() {
     font_large = LV_FONT_DEFAULT;
     font_normal = LV_FONT_DEFAULT;
 
-    #if LV_FONT_MONTSERRAT_24
-            font_large     = &lv_font_montserrat_24;
-    #else
-            LV_LOG_WARN("LV_FONT_MONTSERRAT_24 is not enabled for the widgets demo. Using LV_FONT_DEFAULT instead.");
-    #endif
-    #if LV_FONT_MONTSERRAT_16
-            font_normal    = &lv_font_montserrat_16;
-    #else
-            LV_LOG_WARN("LV_FONT_MONTSERRAT_16 is not enabled for the widgets demo. Using LV_FONT_DEFAULT instead.");
-    #endif
 
     lv_main_ = lv_obj_create(lv_scr_act());
     lv_obj_add_flag(lv_main_, LV_OBJ_FLAG_CLICKABLE);
