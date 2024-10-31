@@ -104,7 +104,7 @@ void HdButton::render_() {
         lv_obj_set_align(icon, has_text ? LV_ALIGN_TOP_MID : LV_ALIGN_CENTER);
         lv_label_set_text(icon, icon_.c_str());
         lv_obj_set_style_text_align(icon, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
-        lv_obj_set_style_text_font(icon, LV_FONT_MONTSERRAT_48, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_text_font(icon, font_large, LV_PART_MAIN | LV_STATE_DEFAULT);
     }
 
     if (has_text) {
@@ -113,7 +113,7 @@ void HdButton::render_() {
         lv_obj_set_height(label, LV_SIZE_CONTENT);
         lv_obj_set_align(label, has_icon ? LV_ALIGN_BOTTOM_MID : LV_ALIGN_CENTER);
         lv_label_set_text(label, text_.c_str());
-        lv_obj_set_style_text_font(label, LV_FONT_MONTSERRAT_16, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_text_font(label, font_normal, LV_PART_MAIN | LV_STATE_DEFAULT);
     }
 
     set_visible(visible_);

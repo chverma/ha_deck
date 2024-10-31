@@ -4,7 +4,7 @@ namespace esphome {
 namespace ha_deck {
 static const lv_font_t * font_large;
 static const lv_font_t * font_normal;
-
+c
 void HdSlider::set_text(std::string text) {
     text_ = text;
 }
@@ -104,10 +104,10 @@ void HdSlider::render_() {
 
         if (text_ != "") {
             lv_label_set_text(label, text_.c_str());
-            lv_obj_set_style_text_font(label, LV_FONT_MONTSERRAT_16, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_text_font(label, font_normal, LV_PART_MAIN | LV_STATE_DEFAULT);
         } else {
             lv_label_set_text(label, icon_.c_str());
-            lv_obj_set_style_text_font(label, LV_FONT_MONTSERRAT_24, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_text_font(label, font_large, LV_PART_MAIN | LV_STATE_DEFAULT);
         }
     }
 }
