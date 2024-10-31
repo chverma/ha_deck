@@ -97,7 +97,7 @@ void HdButton::render_() {
         lv_obj_set_height(label, LV_SIZE_CONTENT);
         lv_obj_set_align(label, has_icon ? LV_ALIGN_BOTTOM_MID : LV_ALIGN_CENTER);
         lv_label_set_text(label, text_.c_str());
-        lv_obj_set_style_text_font(label, &lv_font_montserrat_16, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_text_font(label, LV_FONT_MONTSERRAT_16, LV_PART_MAIN | LV_STATE_DEFAULT);
     }
 
     set_visible(visible_);
